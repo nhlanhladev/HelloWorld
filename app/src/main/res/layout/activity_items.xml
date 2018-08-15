@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context=".item.ItemsActivity">
+
+
+
+    <ImageView
+        android:id="@+id/item"
+        android:src="@drawable/headphone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="5dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_share_black_24dp"
+        android:layout_margin="16dp"
+        app:backgroundTint="#BDBDBD"
+        android:backgroundTint="#BDBDBD"/>
+
+    <RelativeLayout
+        android:id="@+id/itemTopSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item"
+        android:padding="5dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/items_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_below="@+id/items_recyclerview"
+            android:textColor="@color/Black"
+            android:text="Geist 36BL Wireless Bluetooth Running Earphones - Black"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_marginTop="-30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title">
+        <View
+            android:layout_centerInParent="true"
+            android:id="@+id/line"
+            android:background="@color/colorPrimary"
+            android:layout_width = "match_parent"
+            android:layout_height="0.2dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add_shopping_cart_black_24dp"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/price"
+            android:text="R 683"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="-30dp"
+            android:layout_below="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/price_before"
+            android:layout_toRightOf="@+id/price"
+            android:layout_marginLeft="10dp"
+            android:text="Was R 890"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="-25dp"
+            android:layout_below="@+id/container"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@+id/price"
+            android:layout_marginLeft="10dp"
+            android:text="20% OFF"
+            android:textSize="12sp"
+            android:layout_below="@+id/price_before"
+            android:layout_width="70dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/itemTabLayout_id"
+        android:layout_below="@+id/itemTopSection"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/TabLayout_Theme"
+        app:tabPaddingStart="-1dp"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/darkgrey"
+        app:tabIndicatorColor="@color/tabIndicatorColor"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/itemViewPager_id"
+        android:layout_below="@+id/itemTabLayout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>
+
+
+
+</ScrollView>

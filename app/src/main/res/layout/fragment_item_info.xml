@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#E5EBEA"
+    android:padding="10dp"
+    >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Categories"
+                android:padding="3dip" />
+            <TextView
+                android:text="Home speaker,protable"
+                android:gravity="right"
+                android:padding="3dip" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="warrenty"
+                android:padding="3dip" />
+            <TextView
+                android:text="Home speaker,protable"
+                android:gravity="right"
+                android:padding="3dip" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="country"
+                android:padding="3dip" />
+            <TextView
+                android:text="south africa"
+                android:gravity="right"
+                android:padding="3dip" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="brand"
+                android:padding="3dip" />
+            <TextView
+                android:text="ultimate eard"
+                android:gravity="right"
+                android:padding="3dip" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Barcode"
+                android:padding="3dip" />
+            <TextView
+                android:text="11234565543432"
+                android:gravity="right"
+                android:padding="3dip" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="colors"
+                android:padding="3dip" />
+            <TextView
+                android:text="black"
+                android:gravity="right"
+                android:padding="3dip" />
+
+        </TableRow>
+
+
+
+
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Info Fragment"/>
+
+</LinearLayout>

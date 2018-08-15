@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dashboard" android:title="Home" android:icon="@drawable/ic_dashboard_black_24dp"/>
+    <item android:id="@+id/mostSelling" android:title="Most Selling" android:icon="@drawable/ic_event_black_24dp"/>
+    <item android:id="@+id/dailyDeals" android:title="Daily Deals" android:icon="@drawable/ic_search_black_24dp"/>
+    <item android:id="@+id/sale" android:title="Sale" android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:id="@+id/Orders" android:title="Orders" android:icon="@drawable/ic_local_activity_black_24dp"/>
+    <item android:id="@+id/wishList" android:title="Wish List" android:icon="@drawable/wishlist"/>
+    <item android:id="@+id/help" android:title="help" android:icon="@drawable/ic_help_black_24dp"/>
+    <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:id="@+id/logout" android:title="logout" android:icon="@drawable/ic_call_missed_outgoing_black_24dp"/>
+
+</menu>
