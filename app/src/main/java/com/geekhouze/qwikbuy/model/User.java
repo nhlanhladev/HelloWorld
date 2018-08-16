@@ -118,4 +118,20 @@ public class User {
         this.username = username;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "address='" + address + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", email='" + email + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", surname='" + surname + '\'' +
+                ", token=" + token +
+                ", updatedAt='" + updatedAt + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
 }

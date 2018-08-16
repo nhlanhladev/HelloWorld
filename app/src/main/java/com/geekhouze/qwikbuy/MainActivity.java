@@ -9,11 +9,23 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.Toast;
 
+import com.geekhouze.qwikbuy.model.User;
+import com.geekhouze.qwikbuy.service.QuickbuyServiceClient;
 
+import java.util.List;
+import java.util.logging.Logger;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,12 +34,47 @@ public class MainActivity extends AppCompatActivity {
 
     private ActionBarDrawerToggle mToggle;
 
+    private final static Logger LOGGER = Logger.getLogger(MainActivity.class.getName());
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /**
+         * Retrofit allows us to call REST WebService
+         * easily and conveniently
+         * **/
+
         setContentView(R.layout.activity_main);
+
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl("http://160.119.100.194:8080/")
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+
+        QuickbuyServiceClient quickbuyServiceClient = retrofit.create(QuickbuyServiceClient.class);
+
+        Call<List<User>> call = quickbuyServiceClient.getUsers();
+
+        call.enqueue(new Callback<List<User>>() {
+            @Override
+            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                Log.d("myTag", response.toString());
+                List<User> users = response.body();
+                for (User user : users) {
+                    System.out.println(user);
+                }
+                Toast.makeText(MainActivity.this, "Success :-)", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<List<User>> call, Throwable t) {
+                Toast.makeText(MainActivity.this,"error :-(", Toast.LENGTH_SHORT).show();
+                LOGGER.warning(t.getCause().toString());
+            }
+        });
 
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);

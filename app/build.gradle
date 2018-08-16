@@ -5,7 +5,7 @@ android {
     // buildToolsVersion "26.0.3"
     defaultConfig {
         applicationId "com.geekhouze.qwikbuy"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -64,7 +64,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.0'
 
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 
 }
